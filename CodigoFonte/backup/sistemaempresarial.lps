@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="sistemaempresarial.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SistemaEmpresarial"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="30"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umenu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenu"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMenu"/>
+        <TopLine Value="37"/>
+        <CursorPos X="22" Y="65"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="udatamodule1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uDataModule1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="18"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadastrocliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCadastroCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadastroCliente"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="3" Y="8"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uedicaocliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEdicaoCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uEdicaoCliente"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="56"/>
+        <CursorPos X="6" Y="83"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadastroproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCadastroProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadastroProduto"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="31" Y="9"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uedicaoproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEdicaoProduto"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uEdicaoProduto"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="31"/>
+        <CursorPos X="46" Y="44"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="37" Column="19"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="39" Column="19"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="41" Column="19"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="42" Column="19"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="43" Column="19"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="45" Column="19" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="44" Column="19" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="46" Column="19" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaocliente.pas"/>
+        <Caret Line="72" Column="74" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="52" Column="75" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="56" Column="23" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="61" Column="80" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="uedicaoproduto.pas"/>
+        <Caret Line="37" Column="49" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastroproduto.pas"/>
+        <Caret Line="17" Column="48"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastrocliente.pas"/>
+        <Caret Line="51" Column="23" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastroproduto.pas"/>
+        <Caret Line="43" Column="89" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastrocliente.pas"/>
+        <Caret Line="49" Column="4" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastroproduto.pas"/>
+        <Caret Line="32" Column="49" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastroproduto.pas"/>
+        <Caret Line="62" Column="49" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastrocliente.pas"/>
+        <Caret Line="72" Column="35" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastrocliente.pas"/>
+        <Caret Line="79" Column="41" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastroproduto.pas"/>
+        <Caret Line="75" Column="90" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="63" Column="56" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="50" Column="47" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="48" Column="69" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="49" Column="69" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="59" Column="4" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="66" Column="31" TopLine="29"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadastroproduto.pas"/>
+        <Caret Line="9" Column="31"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="52" Column="22" TopLine="31"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

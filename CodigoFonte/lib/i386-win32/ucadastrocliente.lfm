@@ -1,0 +1,162 @@
+object FCadastroCliente: TFCadastroCliente
+  Left = 470
+  Height = 690
+  Top = 145
+  Width = 1224
+  Caption = 'Cadastro de Clientes'
+  ClientHeight = 690
+  ClientWidth = 1224
+  LCLVersion = '2.2.6.0'
+  WindowState = wsMaximized
+  object Panel1: TPanel
+    Left = 0
+    Height = 626
+    Top = 64
+    Width = 160
+    Align = alLeft
+    ClientHeight = 626
+    ClientWidth = 160
+    TabOrder = 0
+    object btnInserir: TSpeedButton
+      Left = 0
+      Height = 56
+      Top = 16
+      Width = 152
+      Caption = 'Inserir'
+      OnClick = btnInserirClick
+    end
+    object btnEditar: TSpeedButton
+      Left = 0
+      Height = 56
+      Top = 88
+      Width = 152
+      Caption = 'Editar'
+      OnClick = btnEditarClick
+    end
+    object btnExcluir: TSpeedButton
+      Left = 0
+      Height = 56
+      Top = 160
+      Width = 152
+      Caption = 'Excluir'
+      OnClick = btnExcluirClick
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 160
+    Height = 626
+    Top = 64
+    Width = 1064
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'CHAVE'
+        FieldName = 'CHAVE'
+      end    
+      item
+        Title.Caption = 'NOME'
+        Width = 200
+        FieldName = 'NOME'
+      end    
+      item
+        Title.Caption = 'CEP'
+        FieldName = 'CEP'
+      end    
+      item
+        Title.Caption = 'LOGRADOURO'
+        FieldName = 'LOGRADOURO'
+      end    
+      item
+        Title.Caption = 'NMRO.'
+        FieldName = 'NUMERO'
+      end    
+      item
+        Title.Caption = 'COMPLEMENTO'
+        Width = 100
+        FieldName = 'COMPLEMENTO'
+      end    
+      item
+        Title.Caption = 'BAIRRO'
+        Width = 80
+        FieldName = 'BAIRRO'
+      end    
+      item
+        Title.Caption = 'CIDADE'
+        Width = 80
+        FieldName = 'CIDADE'
+      end    
+      item
+        Title.Caption = 'UF'
+        Width = 50
+        FieldName = 'UF'
+      end    
+      item
+        Title.Caption = 'TELEFONE_1'
+        Width = 100
+        FieldName = 'TELEFONE_1'
+      end    
+      item
+        Title.Caption = 'TELEFONE_2'
+        Width = 100
+        FieldName = 'TELEFONE_2'
+      end    
+      item
+        Title.Caption = 'EMAIL'
+        Width = 100
+        FieldName = 'EMAIL'
+      end>
+    DataSource = DataModule1.DSCliente
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 1
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 64
+    Top = 0
+    Width = 1224
+    Align = alTop
+    ClientHeight = 64
+    ClientWidth = 1224
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 192
+      Height = 21
+      Top = 16
+      Width = 62
+      Caption = 'BUSCAR:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object EditBusca: TEdit
+      Left = 264
+      Height = 23
+      Top = 14
+      Width = 576
+      OnChange = EditBuscaChange
+      TabOrder = 0
+    end
+  end
+  object QUltimaChaveCliente: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'SELECT MAX(CHAVE) + 1 FROM CLIENTES'
+    )
+    Params = <>
+    Left = 64
+    Top = 8
+    object QUltimaChaveClienteADD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ADD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
+end

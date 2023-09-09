@@ -1,0 +1,110 @@
+object FPDV: TFPDV
+  Left = 507
+  Height = 776
+  Top = 116
+  Width = 1125
+  Caption = 'FPDV'
+  ClientHeight = 776
+  ClientWidth = 1125
+  LCLVersion = '2.2.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 74
+    Top = 0
+    Width = 1125
+    Align = alTop
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 88
+    Top = 688
+    Width = 1125
+    Align = alBottom
+    TabOrder = 1
+  end
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 614
+    Top = 74
+    Width = 1125
+    ActivePage = TabSheet1
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 2
+    object TabSheet1: TTabSheet
+      Caption = 'ITENS DA VENDA'
+      ClientHeight = 586
+      ClientWidth = 1117
+      object Panel3: TPanel
+        Left = 0
+        Height = 80
+        Top = 0
+        Width = 1117
+        Align = alTop
+        ClientHeight = 80
+        ClientWidth = 1117
+        TabOrder = 0
+        object btnInserirItem: TSpeedButton
+          Left = 0
+          Height = 52
+          Top = 8
+          Width = 152
+          Caption = 'Inserir Item'
+        end
+        object btnEditarItem: TSpeedButton
+          Left = 160
+          Height = 52
+          Top = 8
+          Width = 152
+          Caption = 'Editar Item'
+        end
+        object btnExcluirItem: TSpeedButton
+          Left = 812
+          Height = 52
+          Top = 8
+          Width = 152
+          Caption = 'Excluir Item'
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 506
+        Top = 80
+        Width = 1117
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'CHAVE'
+            FieldName = 'CHAVE_PRODUTO'
+          end        
+          item
+            Title.Caption = 'DESCRIÇÃO DO PRODUTO'
+            Width = 500
+            FieldName = 'DESCRICAO'
+          end        
+          item
+            Title.Caption = 'PREÇO UNIT.'
+            Width = 150
+            FieldName = 'PRECO_UNITARIO'
+          end        
+          item
+            Title.Caption = 'QTDE.'
+            Width = 100
+            FieldName = 'QUANTIDADE'
+          end        
+          item
+            Title.Caption = 'VALOR TOTAL'
+            Width = 150
+            FieldName = 'VALOR_TOTAL'
+          end>
+        DataSource = DataModule1.DSItemVenda
+        TabOrder = 1
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'FATURAMENTO'
+    end
+  end
+end
