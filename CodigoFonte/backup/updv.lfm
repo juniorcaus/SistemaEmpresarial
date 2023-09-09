@@ -3,10 +3,12 @@ object FPDV: TFPDV
   Height = 776
   Top = 113
   Width = 1125
-  Caption = 'FPDV'
+  Caption = 'Ponto de Venda'
   ClientHeight = 776
   ClientWidth = 1125
+  OnClose = FormClose
   LCLVersion = '2.2.6.0'
+  WindowState = wsMaximized
   object Panel1: TPanel
     Left = 0
     Height = 74
@@ -75,17 +77,23 @@ object FPDV: TFPDV
     ClientHeight = 88
     ClientWidth = 1125
     TabOrder = 1
-    object SpeedButton1: TSpeedButton
-      Left = 77
-      Height = 22
-      Top = 45
-      Width = 23
+    object BtnConcluir: TSpeedButton
+      Left = 1
+      Height = 86
+      Top = 1
+      Width = 951
+      Align = alClient
+      Caption = 'Concluir'
+      OnClick = BtnConcluirClick
     end
-    object SpeedButton2: TSpeedButton
-      Left = 136
-      Height = 22
-      Top = 45
-      Width = 23
+    object btnCancelar: TSpeedButton
+      Left = 952
+      Height = 86
+      Top = 1
+      Width = 172
+      Align = alRight
+      Caption = 'Cancelar'
+      OnClick = btnCancelarClick
     end
   end
   object PageControl1: TPageControl
@@ -93,9 +101,9 @@ object FPDV: TFPDV
     Height = 614
     Top = 74
     Width = 1125
-    ActivePage = TabSheet2
+    ActivePage = TabSheet1
     Align = alClient
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 2
     object TabSheet1: TTabSheet
       Caption = 'ITENS DA VENDA'
@@ -116,6 +124,7 @@ object FPDV: TFPDV
           Top = 8
           Width = 152
           Caption = 'Inserir Item'
+          OnClick = btnInserirItemClick
         end
         object btnEditarItem: TSpeedButton
           Left = 160
@@ -123,13 +132,15 @@ object FPDV: TFPDV
           Top = 8
           Width = 152
           Caption = 'Editar Item'
+          OnClick = btnEditarItemClick
         end
         object btnExcluirItem: TSpeedButton
-          Left = 812
+          Left = 951
           Height = 52
           Top = 8
           Width = 152
           Caption = 'Excluir Item'
+          OnClick = btnExcluirItemClick
         end
       end
       object DBGrid1: TDBGrid
@@ -388,5 +399,41 @@ object FPDV: TFPDV
     Width = 71
     Caption = 'VALOR TOTAL'
     ParentColor = False
+  end
+  object QUltimaChaveItemVenda: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'SELECT MAX(CHAVE)  + 1 FROM ITEM_VENDAS'
+    )
+    Params = <>
+    Left = 96
+    Top = 272
+    object QUltimaChaveItemVendaADD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ADD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
+  object QUltimaChaveContaAReceber: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'SELECT MAX(CHAVE) + 1 FROM CONTA_A_RECEBER'
+    )
+    Params = <>
+    Left = 96
+    Top = 360
+    object QUltimaChaveContaAReceberADD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ADD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
   end
 end

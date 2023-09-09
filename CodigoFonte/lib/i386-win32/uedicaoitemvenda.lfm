@@ -1,0 +1,115 @@
+object FEdicaoItemVenda: TFEdicaoItemVenda
+  Left = 421
+  Height = 208
+  Top = 114
+  Width = 794
+  Caption = 'Lançamento de Item de Venda'
+  ClientHeight = 208
+  ClientWidth = 794
+  OnClose = FormClose
+  Position = poDesktopCenter
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 31
+    Height = 15
+    Top = 14
+    Width = 53
+    Caption = 'PRODUTO'
+    ParentColor = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 32
+    Height = 23
+    Top = 40
+    Width = 64
+    DataField = 'CHAVE_PRODUTO'
+    DataSource = DataModule1.DSItemVenda
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 104
+    Height = 23
+    Top = 40
+    Width = 352
+    DataField = 'CHAVE_PRODUTO'
+    DataSource = DataModule1.DSItemVenda
+    DropDownCount = 30
+    KeyField = 'CHAVE'
+    ListField = 'DESCRICAO'
+    ListFieldIndex = 0
+    ListSource = DataModule1.DSProduto
+    LookupCache = False
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 471
+    Height = 15
+    Top = 14
+    Width = 69
+    Caption = 'PREÇO UNIT.'
+    ParentColor = False
+  end
+  object DBEdit2: TDBEdit
+    Left = 472
+    Height = 23
+    Top = 40
+    Width = 104
+    DataField = 'PRECO_UNITARIO'
+    DataSource = DataModule1.DSItemVenda
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 588
+    Height = 23
+    Top = 40
+    Width = 84
+    DataField = 'QUANTIDADE'
+    DataSource = DataModule1.DSItemVenda
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object Label3: TLabel
+    Left = 587
+    Height = 15
+    Top = 14
+    Width = 31
+    Caption = 'QTDE.'
+    ParentColor = False
+  end
+  object DBEdit4: TDBEdit
+    Left = 683
+    Height = 23
+    Top = 40
+    Width = 104
+    DataField = 'VALOR_TOTAL'
+    DataSource = DataModule1.DSItemVenda
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object Label4: TLabel
+    Left = 682
+    Height = 15
+    Top = 14
+    Width = 71
+    Caption = 'VALOR TOTAL'
+    ParentColor = False
+  end
+  object btnSalvar: TSpeedButton
+    Left = 32
+    Height = 64
+    Top = 104
+    Width = 512
+    Caption = 'SALVAR'
+    OnClick = btnSalvarClick
+  end
+  object btnCancelar: TSpeedButton
+    Left = 568
+    Height = 64
+    Top = 104
+    Width = 219
+    Caption = 'CANCELAR'
+    OnClick = btnCancelarClick
+  end
+end

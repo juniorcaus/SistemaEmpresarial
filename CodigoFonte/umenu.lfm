@@ -36,6 +36,15 @@ object FMenu: TFMenu
       Caption = 'Cadastro de Produtos'
       OnClick = btnCadastroProdutosClick
     end
+    object btnPDV: TSpeedButton
+      Left = 319
+      Height = 102
+      Top = 1
+      Width = 159
+      Align = alLeft
+      Caption = 'Ponto de Venda (PDV)'
+      OnClick = btnPDVClick
+    end
   end
   object MainMenu1: TMainMenu
     Left = 224
@@ -50,6 +59,24 @@ object FMenu: TFMenu
         Caption = 'Cadastro de Produtos'
         OnClick = MenuItem3Click
       end
+    end
+  end
+  object QUltimaChaveVenda: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'SELECT MAX(CHAVE) +1 FROM VENDAS'
+    )
+    Params = <>
+    Left = 378
+    Top = 120
+    object QUltimaChaveVendaADD: TLargeintField
+      FieldKind = fkData
+      FieldName = 'ADD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
     end
   end
 end

@@ -95,6 +95,13 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uPDV"/>
       </Unit>
+      <Unit>
+        <Filename Value="uedicaoitemvenda.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FEdicaoItemVenda"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uEdicaoItemVenda"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
