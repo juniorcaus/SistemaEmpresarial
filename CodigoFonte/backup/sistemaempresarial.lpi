@@ -135,6 +135,13 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uRelatorioContasAReceber"/>
       </Unit>
+      <Unit>
+        <Filename Value="usplash.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSplash"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSplash"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

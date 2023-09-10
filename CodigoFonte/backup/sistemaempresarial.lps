@@ -13,7 +13,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="93"/>
+        <UsageCount Value="96"/>
       </Unit>
       <Unit>
         <Filename Value="umenu.pas"/>
@@ -22,9 +22,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UMenu"/>
-        <TopLine Value="78"/>
-        <CursorPos X="67" Y="104"/>
-        <UsageCount Value="93"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="96"/>
+        <CursorPos X="50" Y="122"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -35,10 +36,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="uDataModule1"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="56"/>
         <CursorPos X="97" Y="21"/>
-        <UsageCount Value="93"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -49,10 +50,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UCadastroCliente"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <TopLine Value="38"/>
         <CursorPos X="97" Y="75"/>
-        <UsageCount Value="93"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -63,10 +64,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoCliente"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="19"/>
         <CursorPos X="78" Y="88"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="95"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -77,10 +78,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadastroProduto"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="39"/>
         <CursorPos X="121" Y="62"/>
-        <UsageCount Value="90"/>
+        <UsageCount Value="93"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -91,10 +92,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoProduto"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="37"/>
         <CursorPos X="66" Y="71"/>
-        <UsageCount Value="90"/>
+        <UsageCount Value="93"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -105,10 +106,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uPDV"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="139"/>
-        <CursorPos X="4" Y="129"/>
-        <UsageCount Value="88"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="121"/>
+        <CursorPos X="136" Y="140"/>
+        <UsageCount Value="91"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -119,11 +120,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoItemVenda"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="8"/>
         <TopLine Value="51"/>
         <CursorPos X="74" Y="67"/>
-        <UsageCount Value="85"/>
+        <UsageCount Value="88"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -134,10 +134,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uConsultaVendas"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="11"/>
         <TopLine Value="31"/>
         <CursorPos X="53" Y="39"/>
-        <UsageCount Value="39"/>
+        <UsageCount Value="42"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -148,10 +148,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uContasAReceber"/>
-        <EditorIndex Value="8"/>
-        <TopLine Value="28"/>
-        <CursorPos X="32" Y="82"/>
-        <UsageCount Value="38"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="84"/>
+        <CursorPos X="82" Y="90"/>
+        <UsageCount Value="41"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -162,57 +162,28 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uRelatorioContasAReceber"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="10"/>
         <TopLine Value="46"/>
         <CursorPos X="57" Y="78"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="39"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="usplash.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSplash"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSplash"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="14"/>
+        <CursorPos X="9" Y="52"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="79" Column="4" TopLine="62"/>
-      </Position>
-      <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="65" Column="82" TopLine="62"/>
-      </Position>
-      <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="77" Column="56" TopLine="69"/>
-      </Position>
-      <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="79" Column="4" TopLine="69"/>
-      </Position>
-      <Position>
-        <Filename Value="umenu.pas"/>
-        <Caret Line="61" Column="4" TopLine="78"/>
-      </Position>
-      <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="6" Column="4" TopLine="13"/>
-      </Position>
-      <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="52" Column="4" TopLine="39"/>
-      </Position>
-      <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="74" Column="44" TopLine="39"/>
-      </Position>
-      <Position>
-        <Filename Value="ucadastroproduto.pas"/>
-        <Caret Line="60" Column="62" TopLine="39"/>
-      </Position>
-      <Position>
-        <Filename Value="ucadastrocliente.pas"/>
-        <Caret Line="9" Column="44"/>
-      </Position>
-      <Position>
-        <Filename Value="ucadastrocliente.pas"/>
-        <Caret Line="53" Column="129" TopLine="37"/>
-      </Position>
       <Position>
         <Filename Value="ucadastrocliente.pas"/>
         <Caret Line="61" Column="116" TopLine="37"/>
@@ -288,6 +259,49 @@
       <Position>
         <Filename Value="uedicaoitemvenda.pas"/>
         <Caret Line="60" Column="4" TopLine="58"/>
+      </Position>
+      <Position>
+        <Filename Value="updv.pas"/>
+        <Caret Line="102" Column="18" TopLine="76"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontasareceber.pas"/>
+        <Caret Line="58" Column="52" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="ucontasareceber.pas"/>
+        <Caret Line="63" Column="83" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="usplash.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="74" Column="11" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="usplash.pas"/>
+        <Caret Line="14" Column="33"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="108" Column="100" TopLine="86"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="109" Column="100" TopLine="87"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="111" Column="100" TopLine="89"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="121" Column="37" TopLine="95"/>
+      </Position>
+      <Position>
+        <Filename Value="umenu.pas"/>
+        <Caret Line="122" Column="49" TopLine="96"/>
       </Position>
     </JumpHistory>
     <RunParams>

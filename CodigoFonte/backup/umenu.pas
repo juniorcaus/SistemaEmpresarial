@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
-  Buttons, ZDataset;
+  Buttons, StdCtrls, ZDataset, uSplash;
 
 type
 
@@ -17,6 +17,8 @@ type
     btnContasAReceber: TSpeedButton;
     btnPDV: TSpeedButton;
     btnConsultaVendas: TSpeedButton;
+    imgGitHub: TImage;
+    lblDireitoReservado: TLabel;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
@@ -31,6 +33,7 @@ type
     procedure btnContasAReceberClick(Sender: TObject);
     procedure btnPDVClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure imgGitHubClick(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
   private
@@ -44,7 +47,7 @@ var
 
 implementation
 
-uses UCadastroCliente, UCadastroProduto, UDataModule1, uPDV, uConsultaVendas, uContasAReceber;
+uses UCadastroCliente, UCadastroProduto, UDataModule1, uPDV, uConsultaVendas, uContasAReceber, ShellAPI;
 
 {$R *.lfm}
 
@@ -101,7 +104,22 @@ begin
    DataModule1.TProduto.Open; //Abrir a tabela Produtos
    DataModule1.TVenda.Open;   //Abrir a tabela Venda
    DataModule1.TItemVenda.Open; //Abrir a tabela  ItemVenda
-   DataModule1.TContaAReceber.Open;
+   DataModule1.TContaAReceber.Open; //Abrir a tabela ContaAReceber
+
+   //ADICIONANDO TELA DE CARREGAMENTO uSplash
+   FrmSplash := TFrmSplash.Create(nil);
+   try  // mesmo que ocorra um erro, o código vai cair no finally para evitar vazamento de memoria
+     FrmSplash.ShowModal; //exibir o formulario
+   finally
+     FreeAndNil(FrmSplash); //destruir objeto acima, para evitar vazamento de memoria
+   end;
+end;
+
+procedure TFMenu.imgGitHubClick(Sender: TObject);  //OnClick BOTAO GITHUB
+const
+  URL = 'https://github.com/juniorcaus/';
+begin
+  ShellExecute(0, 'open', PChar(URL), nil, nil, 1);
 end;
 
 procedure TFMenu.MenuItem2Click(Sender: TObject); //MENU CADASTRO DE CLIENTE
