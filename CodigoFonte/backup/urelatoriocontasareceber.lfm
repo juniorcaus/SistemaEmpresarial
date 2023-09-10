@@ -1,0 +1,287 @@
+object FRelatorioContasAReceber: TFRelatorioContasAReceber
+  Left = 307
+  Height = 656
+  Top = 171
+  Width = 1301
+  Caption = 'FRelatorioContasAReceber'
+  ClientHeight = 656
+  ClientWidth = 1301
+  DesignTimePPI = 120
+  LCLVersion = '2.2.0.4'
+  object RLReport1: TRLReport
+    Left = 40
+    Height = 1123
+    Top = 16
+    Width = 794
+    DataSource = DSRelatorio
+    DefaultFilter = RLPDFFilter1
+    Font.Color = clBlack
+    Font.Height = -17
+    Font.Name = 'Arial'
+    BeforePrint = RLReport1BeforePrint
+    object RLBand1: TRLBand
+      Left = 38
+      Height = 96
+      Top = 38
+      Width = 718
+      BandType = btTitle
+      object RLLabel1: TRLLabel
+        Left = 0
+        Height = 19
+        Top = 0
+        Width = 718
+        Align = faTop
+        Alignment = taCenter
+        Caption = 'Relat√≥rio de Contas √† Receber'
+      end
+      object RLLabel4: TRLLabel
+        Left = 1
+        Height = 19
+        Top = 72
+        Width = 55
+        Caption = 'Cliente'
+      end
+      object RLLabel5: TRLLabel
+        Left = 272
+        Height = 19
+        Top = 72
+        Width = 87
+        Caption = 'Data Venc.'
+      end
+      object RLLabel6: TRLLabel
+        Left = 376
+        Height = 19
+        Top = 72
+        Width = 78
+        Caption = 'Data Pag.'
+      end
+      object RLLabel7: TRLLabel
+        Left = 480
+        Height = 19
+        Top = 72
+        Width = 43
+        Caption = 'Valor'
+      end
+      object RLLabel8: TRLLabel
+        Left = 581
+        Height = 19
+        Top = 72
+        Width = 50
+        Caption = 'Status'
+      end
+      object RLDraw2: TRLDraw
+        Left = 0
+        Height = 1
+        Top = 69
+        Width = 718
+      end
+      object RLDraw3: TRLDraw
+        Left = 0
+        Height = 1
+        Top = 92
+        Width = 718
+      end
+    end
+    object RLBand2: TRLBand
+      Left = 38
+      Height = 36
+      Top = 134
+      Width = 718
+      BeforePrint = RLBand2BeforePrint
+      object RLDBText1: TRLDBText
+        Left = 1
+        Height = 19
+        Top = 8
+        Width = 271
+        AutoSize = False
+        DataField = 'NOME'
+        DataSource = DSRelatorio
+      end
+      object RLDBText2: TRLDBText
+        Left = 273
+        Height = 19
+        Top = 8
+        Width = 163
+        DataField = 'DATA_VENCIMENTO'
+        DataSource = DSRelatorio
+      end
+      object RLDBText3: TRLDBText
+        Left = 376
+        Height = 19
+        Top = 8
+        Width = 160
+        DataField = 'DATA_PAGAMEMTO'
+        DataSource = DSRelatorio
+      end
+      object RLDBText4: TRLDBText
+        Left = 480
+        Height = 19
+        Top = 8
+        Width = 59
+        DataField = 'VALOR'
+        DataSource = DSRelatorio
+      end
+      object RLDBText5: TRLDBText
+        Left = 581
+        Height = 19
+        Top = 8
+        Width = 67
+        DataField = 'STATUS'
+        DataSource = DSRelatorio
+      end
+      object RLDraw1: TRLDraw
+        Left = 0
+        Height = 1
+        Top = 32
+        Width = 718
+      end
+    end
+    object RLBand3: TRLBand
+      Left = 38
+      Height = 72
+      Top = 170
+      Width = 718
+      BandType = btSummary
+      BeforePrint = RLBand3BeforePrint
+      object RLLabel2: TRLLabel
+        Left = 480
+        Height = 19
+        Top = 15
+        Width = 179
+        Caption = 'Valor Total do Relat√≥rio:'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+      object txtTotalRelatorio: TRLLabel
+        Left = 480
+        Height = 19
+        Top = 40
+        Width = 57
+        Caption = 'R$0,00'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Height = -17
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentFont = False
+      end
+    end
+  end
+  object RLPDFFilter1: TRLPDFFilter
+    DocumentInfo.Creator = 'FortesReport Community Edition v4.0.0.1 \251 Copyright © 1999-2021 Fortes Inform·tica'
+    DisplayName = 'Documento PDF'
+    Left = 57
+    Top = 52
+  end
+  object QRelatorio: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'SELECT * FROM CONTA_A_RECEBER'
+    )
+    Params = <>
+    Left = 504
+    Top = 8
+    object QRelatorioCHAVE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object QRelatorioCHAVE_VENDA: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_VENDA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object QRelatorioCHAVE_CLIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_CLIENTE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object QRelatorioVALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#########0.00'
+      EditFormat = '#########0.00'
+      Precision = 2
+    end
+    object QRelatorioDATA_VENCIMENTO: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA_VENCIMENTO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object QRelatorioDATA_PAGAMEMTO: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA_PAGAMEMTO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object QRelatorioSTATUS: TStringField
+      FieldKind = fkData
+      FieldName = 'STATUS'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object QRelatorioFORMA_PAGTO: TStringField
+      FieldKind = fkData
+      FieldName = 'FORMA_PAGTO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOME'
+      Index = 8
+      KeyFields = 'CHAVE_CLIENTE'
+      LookupCache = False
+      LookupDataSet = DataModule1.TCliente
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'NOME'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+  end
+  object DSRelatorio: TDataSource
+    DataSet = QRelatorio
+    Left = 619
+    Top = 5
+  end
+end

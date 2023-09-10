@@ -37,41 +37,41 @@ var
   FCadastroProduto: TFCadastroProduto;
 
 implementation
+
 uses uDataModule1, uEdicaoProduto;
 
 {$R *.lfm}
 
 { TFCadastroProduto }
 
-procedure TFCadastroProduto.btnInserirClick(Sender: TObject);   //BOTAO INSERIR PRODUTOS
+procedure TFCadastroProduto.btnInserirClick(Sender: TObject); //BOTAO INSERIR PRODUTO
 begin
    DataModule1.TProduto.Filtered := false;
    QUltimaChaveProduto.Close;
    QUltimaChaveProduto.Open;
-  DataModule1.TProduto.Insert;//COMANDO PARA  INSERIR UM REGISTRO NOVO NA TABELA PRODUTO DO BANCO DE DADOS
-   DataModule1.TProdutoCHAVE.VALUE := QUltimaChaveProdutoADD.Value; //QUERY PARA CRIAR  A CHAVE"ID" AUTOMATICO PARA N SE REPETIR
 
-  FEdicaoProduto := TFEdicaoProduto.Create(Self);
-  FEdicaoProduto.ShowModal;
+   DataModule1.TProduto.Insert; //COMANDO PARA  INSERIR UM REGISTRO NOVO NA TABELA PRODUTO DO BANCO DE DADOS
+   DataModule1.TProdutoCHAVE.Value:= QUltimaChaveProdutoADD.Value; //QUERY PARA CRIAR  A CHAVE"ID" AUTOMATICO PARA N SE REPETIR
 
+   FEdicaoProduto := TFEdicaoProduto.Create(Self);
+   FEdicaoProduto.ShowModal;
 end;
 
-procedure TFCadastroProduto.EditBuscaChange(Sender: TObject); // OnChance CAMPO BUSCA
+procedure TFCadastroProduto.EditBuscaChange(Sender: TObject); //OnChange Campo de Buscar
 begin
-     DataModule1.TProduto.Filter := 'DESCRICAO LIKE'+QuotedStr('*'+EditBusca.Text+'*'); //comando para filtrar no buscar
-     DataModule1.TProduto.Filtered := true;
+   DataModule1.TProduto.Filter := 'DESCRICAO LIKE '+QuotedStr('*'+EditBusca.Text+'*'); //comando para filtrar no buscar
+   DataModule1.TProduto.Filtered := true;
 end;
 
-procedure TFCadastroProduto.btnEditarClick(Sender: TObject); //BOTAO EDITAR PRODUTOS
+procedure TFCadastroProduto.btnEditarClick(Sender: TObject); //BOTAO EDITAR PRODUTO
 begin
    DataModule1.TProduto.Filtered := false;
-  DataModule1.TProduto.Edit;//COMANDO PARA  EDITAR UM REGISTRO DA TABELA DO BANCO DE DADOS
-  FEdicaoProduto := TFEdicaoProduto.Create(Self);
-  FEdicaoProduto.ShowModal;
-
+   DataModule1.TProduto.Edit; //COMANDO PARA  EDITAR UM REGISTRO DA TABELA DO BANCO DE DADOS
+   FEdicaoProduto := TFEdicaoProduto.Create(Self);
+   FEdicaoProduto.ShowModal;
 end;
 
-procedure TFCadastroProduto.btnExcluirClick(Sender: TObject);  //BOTAO EXCLUIR PRODUTOS
+procedure TFCadastroProduto.btnExcluirClick(Sender: TObject); //BOTAO EXCLUIR PRODUTO
 begin
    DataModule1.TProduto.Delete; //COMANDO PARA  APAGAR UM REGISTRO DA TABELA DE PRODUTOS DO BANCO DE DADOS
    DataModule1.TProduto.ApplyUpdates;

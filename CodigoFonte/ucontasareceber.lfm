@@ -1,0 +1,311 @@
+object FContasAReceber: TFContasAReceber
+  Left = 307
+  Height = 619
+  Top = 171
+  Width = 1277
+  Caption = 'Contas à Receber'
+  ClientHeight = 619
+  ClientWidth = 1277
+  OnClose = FormClose
+  OnShow = FormShow
+  LCLVersion = '2.2.6.0'
+  WindowState = wsMaximized
+  object Panel1: TPanel
+    Left = 0
+    Height = 83
+    Top = 0
+    Width = 1277
+    Align = alTop
+    ClientHeight = 83
+    ClientWidth = 1277
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 20
+      Height = 15
+      Top = 14
+      Width = 107
+      Caption = 'FILTRAR CONTAS DE'
+      ParentColor = False
+    end
+    object DateTimePicker1: TDateTimePicker
+      Left = 138
+      Height = 23
+      Top = 10
+      Width = 83
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      TabOrder = 0
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      Date = 44621
+      Time = 0.631305590279226
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+    object Label2: TLabel
+      Left = 230
+      Height = 15
+      Top = 13
+      Width = 22
+      Caption = 'ATÉ '
+      ParentColor = False
+    end
+    object DateTimePicker2: TDateTimePicker
+      Left = 262
+      Height = 23
+      Top = 10
+      Width = 83
+      CenturyFrom = 1941
+      MaxDate = 2958465
+      MinDate = -53780
+      TabOrder = 1
+      TrailingSeparator = False
+      TextForNullDate = 'NULL'
+      LeadingZeros = True
+      Kind = dtkDate
+      TimeFormat = tf24
+      TimeDisplay = tdHMS
+      DateMode = dmComboBox
+      Date = 44621
+      Time = 0.63158039352129
+      UseDefaultSeparators = True
+      HideDateTimeParts = []
+      MonthNames = 'Long'
+    end
+    object btnBuscar: TSpeedButton
+      Left = 358
+      Height = 33
+      Top = 6
+      Width = 131
+      Caption = 'Buscar'
+      OnClick = btnBuscarClick
+    end
+    object txtValorTotalListado: TLabel
+      Left = 494
+      Height = 15
+      Top = 16
+      Width = 30
+      Caption = '          '
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 20
+      Height = 15
+      Top = 45
+      Width = 115
+      Caption = 'FILTRAR POR STATUS: '
+      ParentColor = False
+    end
+    object ComboBox1: TComboBox
+      Left = 141
+      Height = 23
+      Top = 42
+      Width = 206
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'TODOS'
+        'PAGO'
+        'PENDENTE'
+      )
+      TabOrder = 2
+      Text = 'TODOS'
+    end
+    object btnRelatorio: TSpeedButton
+      Left = 358
+      Height = 33
+      Top = 45
+      Width = 131
+      Caption = 'Relatório'
+      OnClick = btnRelatorioClick
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 536
+    Top = 83
+    Width = 1277
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        MinSize = 8
+        MaxSize = 160
+        Title.Caption = 'CHAVE'
+        FieldName = 'CHAVE'
+      end    
+      item
+        MinSize = 8
+        MaxSize = 160
+        Title.Caption = 'VENDA'
+        FieldName = 'CHAVE_VENDA'
+      end    
+      item
+        MinSize = 8
+        MaxSize = 160
+        PickList.Strings = (
+          'Beltrano'
+          'Ana Exemplo'
+          'Joao Exemplo'
+          'Maria Exemplo'
+        )
+        Title.Caption = 'NOME DO CLIENTE'
+        Width = 420
+        FieldName = 'NOME'
+      end    
+      item
+        MinSize = 8
+        MaxSize = 160
+        Title.Caption = 'VALOR'
+        FieldName = 'VALOR'
+      end    
+      item
+        MinSize = 8
+        MaxSize = 160
+        Title.Caption = 'DATA VENC.'
+        Width = 72
+        FieldName = 'DATA_VENCIMENTO'
+      end    
+      item
+        MinSize = 8
+        MaxSize = 160
+        Title.Caption = 'DATA PAG.'
+        Width = 72
+        FieldName = 'DATA_PAGAMEMTO'
+      end    
+      item
+        MinSize = 8
+        MaxSize = 160
+        Title.Caption = 'STATUS'
+        Width = 120
+        FieldName = 'STATUS'
+      end>
+    DataSource = DSContasAReceber
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    PopupMenu = PopupMenu1
+    TabOrder = 1
+  end
+  object TContasAReceber: TZTable
+    Connection = DataModule1.ZConnection1
+    TableName = 'CONTA_A_RECEBER'
+    Left = 39
+    Top = 135
+    object TContasAReceberCHAVE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      ReadOnly = False
+      Required = True
+    end
+    object TContasAReceberCHAVE_VENDA: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_VENDA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TContasAReceberCHAVE_CLIENTE: TLongintField
+      FieldKind = fkData
+      FieldName = 'CHAVE_CLIENTE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TContasAReceberVALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#########0.00'
+      EditFormat = '#########0.00'
+      Precision = 2
+    end
+    object TContasAReceberDATA_VENCIMENTO: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA_VENCIMENTO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TContasAReceberDATA_PAGAMEMTO: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA_PAGAMEMTO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+    end
+    object TContasAReceberSTATUS: TStringField
+      FieldKind = fkData
+      FieldName = 'STATUS'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TContasAReceberFORMA_PAGTO: TStringField
+      FieldKind = fkData
+      FieldName = 'FORMA_PAGTO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOME'
+      Index = 8
+      KeyFields = 'CHAVE_CLIENTE'
+      LookupCache = False
+      LookupDataSet = DataModule1.TCliente
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'NOME'
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
+  end
+  object DSContasAReceber: TDataSource
+    AutoEdit = False
+    DataSet = TContasAReceber
+    Enabled = False
+    Left = 39
+    Top = 192
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 216
+    Top = 198
+    object MenuItem1: TMenuItem
+      Caption = 'Marcar como PAGO'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Marcar como PENDENTE'
+      OnClick = MenuItem2Click
+    end
+  end
+end

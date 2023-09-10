@@ -1,109 +1,135 @@
 object FCadastroCliente: TFCadastroCliente
-  Left = 470
-  Height = 690
-  Top = 145
-  Width = 1224
+  Left = 402
+  Height = 615
+  Top = 157
+  Width = 1432
   Caption = 'Cadastro de Clientes'
-  ClientHeight = 690
-  ClientWidth = 1224
+  ClientHeight = 615
+  ClientWidth = 1432
   LCLVersion = '2.2.6.0'
   WindowState = wsMaximized
   object Panel1: TPanel
     Left = 0
-    Height = 626
-    Top = 64
-    Width = 160
+    Height = 565
+    Top = 50
+    Width = 122
     Align = alLeft
-    ClientHeight = 626
-    ClientWidth = 160
+    ClientHeight = 565
+    ClientWidth = 122
     TabOrder = 0
     object btnInserir: TSpeedButton
-      Left = 0
-      Height = 56
-      Top = 16
-      Width = 152
+      Left = 6
+      Height = 51
+      Top = 13
+      Width = 109
       Caption = 'Inserir'
       OnClick = btnInserirClick
     end
     object btnEditar: TSpeedButton
-      Left = 0
-      Height = 56
-      Top = 88
-      Width = 152
+      Left = 6
+      Height = 51
+      Top = 70
+      Width = 109
       Caption = 'Editar'
       OnClick = btnEditarClick
     end
     object btnExcluir: TSpeedButton
-      Left = 0
-      Height = 56
-      Top = 160
-      Width = 152
+      Left = 6
+      Height = 51
+      Top = 128
+      Width = 109
       Caption = 'Excluir'
       OnClick = btnExcluirClick
     end
   end
   object DBGrid1: TDBGrid
-    Left = 160
-    Height = 626
-    Top = 64
-    Width = 1064
+    Left = 122
+    Height = 565
+    Top = 50
+    Width = 1310
     Align = alClient
     Color = clWindow
     Columns = <    
       item
+        MinSize = 8
+        MaxSize = 160
         Title.Caption = 'CHAVE'
         FieldName = 'CHAVE'
       end    
       item
+        MinSize = 8
+        MaxSize = 160
         Title.Caption = 'NOME'
-        Width = 200
+        Width = 240
         FieldName = 'NOME'
       end    
       item
+        MinSize = 8
+        MaxSize = 160
         Title.Caption = 'CEP'
         FieldName = 'CEP'
       end    
       item
+        MinSize = 8
+        MaxSize = 160
         Title.Caption = 'LOGRADOURO'
+        Width = 160
         FieldName = 'LOGRADOURO'
       end    
       item
-        Title.Caption = 'NMRO.'
+        MinSize = 8
+        MaxSize = 160
+        Title.Caption = 'NRO.'
+        Width = 48
         FieldName = 'NUMERO'
       end    
       item
+        MinSize = 8
+        MaxSize = 160
         Title.Caption = 'COMPLEMENTO'
         Width = 100
         FieldName = 'COMPLEMENTO'
       end    
       item
+        MinSize = 8
+        MaxSize = 160
         Title.Caption = 'BAIRRO'
-        Width = 80
+        Width = 100
         FieldName = 'BAIRRO'
       end    
       item
+        MinSize = 8
+        MaxSize = 160
         Title.Caption = 'CIDADE'
-        Width = 80
+        Width = 100
         FieldName = 'CIDADE'
       end    
       item
+        MinSize = 8
+        MaxSize = 160
         Title.Caption = 'UF'
-        Width = 50
+        Width = 40
         FieldName = 'UF'
       end    
       item
-        Title.Caption = 'TELEFONE_1'
-        Width = 100
+        MinSize = 8
+        MaxSize = 160
+        Title.Caption = 'TELEFONE 1'
+        Width = 96
         FieldName = 'TELEFONE_1'
       end    
       item
-        Title.Caption = 'TELEFONE_2'
-        Width = 100
+        MinSize = 8
+        MaxSize = 160
+        Title.Caption = 'TELEFONE 2'
+        Width = 96
         FieldName = 'TELEFONE_2'
       end    
       item
+        MinSize = 8
+        MaxSize = 160
         Title.Caption = 'EMAIL'
-        Width = 100
+        Width = 120
         FieldName = 'EMAIL'
       end>
     DataSource = DataModule1.DSCliente
@@ -112,31 +138,26 @@ object FCadastroCliente: TFCadastroCliente
   end
   object Panel2: TPanel
     Left = 0
-    Height = 64
+    Height = 50
     Top = 0
-    Width = 1224
+    Width = 1432
     Align = alTop
-    ClientHeight = 64
-    ClientWidth = 1224
+    ClientHeight = 50
+    ClientWidth = 1432
     TabOrder = 2
     object Label1: TLabel
-      Left = 192
-      Height = 21
-      Top = 16
-      Width = 62
-      Caption = 'BUSCAR:'
-      Font.CharSet = ANSI_CHARSET
-      Font.Height = -16
-      Font.Pitch = fpVariable
-      Font.Quality = fqDraft
+      Left = 122
+      Height = 15
+      Top = 13
+      Width = 50
+      Caption = 'BUSCAR: '
       ParentColor = False
-      ParentFont = False
     end
     object EditBusca: TEdit
-      Left = 264
+      Left = 176
       Height = 23
-      Top = 14
-      Width = 576
+      Top = 10
+      Width = 560
       OnChange = EditBuscaChange
       TabOrder = 0
     end
@@ -144,11 +165,10 @@ object FCadastroCliente: TFCadastroCliente
   object QUltimaChaveCliente: TZQuery
     Connection = DataModule1.ZConnection1
     SQL.Strings = (
-      'SELECT MAX(CHAVE) + 1 FROM CLIENTES'
+      'SELECT MAX(CHAVE) +1 FROM CLIENTES'
     )
     Params = <>
-    Left = 64
-    Top = 8
+    Left = 840
     object QUltimaChaveClienteADD: TLargeintField
       FieldKind = fkData
       FieldName = 'ADD'

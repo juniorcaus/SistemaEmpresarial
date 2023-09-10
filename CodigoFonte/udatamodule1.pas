@@ -72,6 +72,7 @@ type
     TVenda: TZTable;
     TItemVenda: TZTable;
     TContaAReceber: TZTable;
+    procedure DataModuleCreate(Sender: TObject);
   private
 
   public
@@ -84,6 +85,14 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TDataModule1 }
+
+procedure TDataModule1.DataModuleCreate(Sender: TObject);
+begin
+   ZConnection1.Database := 'BANCODADOS.FDB';
+   ZConnection1.Connected := true;
+end;
 
 end.
 

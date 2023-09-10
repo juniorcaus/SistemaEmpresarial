@@ -5,8 +5,8 @@ unit uEdicaoProduto;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, DBCtrls,
-  StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, StdCtrls,
+  DBCtrls;
 
 type
 
@@ -33,6 +33,7 @@ type
     Label8: TLabel;
     procedure btnCancelarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
   private
 
   public
@@ -50,20 +51,28 @@ uses uDataModule1;
 
 { TFEdicaoProduto }
 
-procedure TFEdicaoProduto.btnSalvarClick(Sender: TObject);  //BOTAO SALVAR
+procedure TFEdicaoProduto.btnSalvarClick(Sender: TObject); //BOTAO SALVAR EDITCAO PRODUTO
 begin
-
-  DataModule1.TProduto.Post; //COMANDO PARA POSTAR NA TABELA DO BANCO DE DADOS
-  DataModule1.TProduto.ApplyUpdates; //COMANDO PARA SALVAR NA TABELA
-  btnCancelar.Enabled := False ;
-  Close;
+   DataModule1.TProduto.Post; //COMANDO PARA POSTAR NA TABELA DO BANCO DE DADOS
+   DataModule1.TProduto.ApplyUpdates; //COMANDO PARA SALVAR NA TABELA
+   btnCancelar.Enabled := false;
+   Close;
 end;
 
-procedure TFEdicaoProduto.btnCancelarClick(Sender: TObject);   //BOTAO CANCELAR
+procedure TFEdicaoProduto.FormClose(Sender: TObject; // Evento OnClose do FEdicaoProduto
+  var CloseAction: TCloseAction);
 begin
-  DataModule1.TProduto.Cancel;
-  btnCancelar.Enabled := false;
-  Close;
+   if(btnCancelar.Enabled)then //FUNCAO PARA VER SE O BOTAO CANCELAR ESTÁ HABILITADO, SE SIM VAI DAR UM CANCEL
+   begin
+      DataModule1.TCliente.Cancel;
+   end;
+end;
+
+procedure TFEdicaoProduto.btnCancelarClick(Sender: TObject);
+begin
+   DataModule1.TProduto.Cancel;
+   btnCancelar.Enabled := false;
+   Close;
 end;
 
 end.

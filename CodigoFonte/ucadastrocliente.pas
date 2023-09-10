@@ -1,4 +1,4 @@
-unit uCadastroCliente;
+unit UCadastroCliente;
 
 {$mode ObjFPC}{$H+}
 
@@ -44,40 +44,36 @@ uses uDataModule1, uEdicaoCliente;
 
 { TFCadastroCliente }
 
-procedure TFCadastroCliente.btnInserirClick(Sender: TObject);   //BOTAO INSERIR
+procedure TFCadastroCliente.btnInserirClick(Sender: TObject); //BOTAO INSERIR CLIENTE
 begin
-    DataModule1.TCliente.Filtered := false;
+   DataModule1.TCliente.Filtered := false;
    QUltimaChaveCliente.Close;
    QUltimaChaveCliente.Open;
-  DataModule1.TCliente.Insert;//COMANDO PARA  INSERIR UM REGISTRO NOVO NA TABELA DO BANCO DE DADOS
-   DataModule1.TClienteCHAVE.VALUE := QUltimaChaveClienteADD.Value; //QUERY PARA CRIAR  A CHAVE"ID" AUTOMATICO PARA N SE REPETIR
+   DataModule1.TCliente.Insert; //COMANDO PARA  INSERIR UM REGISTRO NOVO NA TABELA DO BANCO DE DADOS
+   DataModule1.TClienteCHAVE.Value:= QUltimaChaveClienteADD.Value; //QUERY PARA CRIAR  A CHAVE"ID" AUTOMATICO PARA N SE REPETIR
 
-  FEdicaoCliente := TFEdicaoCliente.Create(Self);
-  FEdicaoCliente.ShowModal;
-
+   FEdicaoCliente := TFEdicaoCliente.Create(Self);
+   FEdicaoCliente.ShowModal;
 end;
 
-procedure TFCadastroCliente.EditBuscaChange(Sender: TObject);  //EDIT BUSCA, EVENTO OnChane
+procedure TFCadastroCliente.EditBuscaChange(Sender: TObject); //OnChange Evento do EditBusca
 begin
-  DataModule1.TCliente.Filter := 'NOME LIKE'+QuotedStr('*'+EditBusca.Text+'*'); //comando para filtrar no buscar
-  DataModule1.TCliente.Filtered := true;
-
+   DataModule1.TCliente.Filter := 'NOME LIKE '+QuotedStr('*'+EditBusca.Text+'*'); //comando para filtrar no buscar
+   DataModule1.TCliente.Filtered := true;
 end;
 
-procedure TFCadastroCliente.btnEditarClick(Sender: TObject);   //BOTAO EDITAR
+procedure TFCadastroCliente.btnEditarClick(Sender: TObject); //BOTAO EDITAR CLIENTES
 begin
-  DataModule1.TCliente.Filtered := false;
-  DataModule1.TCliente.Edit;//COMANDO PARA  EDITAR UM REGISTRO DA TABELA DO BANCO DE DADOS
-  FEdicaoCliente := TFEdicaoCliente.Create(Self);
-  FEdicaoCliente.ShowModal;
-
+   DataModule1.TCliente.Filtered := false;
+   DataModule1.TCliente.Edit;  //COMANDO PARA  EDITAR UM REGISTRO DA TABELA DO BANCO DE DADOS
+   FEdicaoCliente := TFEdicaoCliente.Create(Self);
+   FEdicaoCliente.ShowModal;
 end;
 
-procedure TFCadastroCliente.btnExcluirClick(Sender: TObject); //BOTAO EXCLUIR
+procedure TFCadastroCliente.btnExcluirClick(Sender: TObject); //BOTAO EXCLUIR CLIENTES
 begin
-  DataModule1.TCliente.Delete; //COMANDO PARA  APAGAR UM REGISTRO DA TABELA DO BANCO DE DADOS
+   DataModule1.TCliente.Delete;   //COMANDO PARA  APAGAR UM REGISTRO DA TABELA DO BANCO DE DADOS
    DataModule1.TCliente.ApplyUpdates;
-
 end;
 
 end.

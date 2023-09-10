@@ -1,0 +1,829 @@
+%PDF-1.2
+1 0 obj <<
+/CreationDate(D:20220302202354)
+/Creator(FortesReport Community Edition v4.0.0.1 \251 Copyright © 1999-2021 Fortes Informática)
+>> endobj
+2 0 obj <<
+/Type/Catalog
+/Pages 3 0 R
+>> endobj
+5 0 obj <<
+/Type/Page
+/Parent 3 0 R
+/Resources 4 0 R
+/MediaBox [ 0 0 595.5 842.25 ]
+/Contents 6 0 R
+>> endobj
+6 0 obj <<
+/Length 7 0 R
+>>
+stream
+q
+28.5 741.75 538.5 72 re
+W n
+Q
+q
+28.5 741.75 538.5 72 re
+W n
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+213.75 802.5 Td
+(Relatório de Contas à Receber) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+30.75 746.25 Td
+(Cliente) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234 746.25 Td
+(Data Venc.) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 746.25 Td
+(Data Pag.) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 746.25 Td
+(Valor) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 746.25 Td
+(Status) Tj
+ET
+Q
+Q
+q
+28.5 711.75 538.5 30 re
+W n
+Q
+q
+28.5 711.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 726 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 729 Td
+(Joao Exemplo) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 729 Td
+(01/03/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 729 Td
+(01/03/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 729 Td
+(134,85) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 729 Td
+(PAGO) Tj
+ET
+Q
+Q
+q
+28.5 681.75 538.5 30 re
+W n
+Q
+q
+28.5 681.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 696 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 699 Td
+(Joao Exemplo) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 699 Td
+(12/04/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 710.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 699 Td
+(25,00) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 699 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 651.75 538.5 30 re
+W n
+Q
+q
+28.5 651.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 666 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 669 Td
+(Joao Exemplo) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 669 Td
+(12/05/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 680.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 669 Td
+(25,00) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 669 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 621.75 538.5 30 re
+W n
+Q
+q
+28.5 621.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 636 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 639 Td
+(Joao Exemplo) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 639 Td
+(12/06/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 650.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 639 Td
+(25,00) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 639 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 591.75 538.5 30 re
+W n
+Q
+q
+28.5 591.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 606 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 609 Td
+(Joao Exemplo) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 609 Td
+(12/07/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 620.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 609 Td
+(25,00) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 609 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 561.75 538.5 30 re
+W n
+Q
+q
+28.5 561.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 576 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 590.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 579 Td
+(01/03/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 579 Td
+(01/03/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 579 Td
+(44,77) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 579 Td
+(PAGO) Tj
+ET
+Q
+Q
+q
+28.5 531.75 538.5 30 re
+W n
+Q
+q
+28.5 531.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 546 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 560.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 549 Td
+(25/04/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 560.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 549 Td
+(42,86) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 549 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 501.75 538.5 30 re
+W n
+Q
+q
+28.5 501.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 516 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 530.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 519 Td
+(25/05/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 530.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 519 Td
+(42,86) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 519 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 471.75 538.5 30 re
+W n
+Q
+q
+28.5 471.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 486 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 500.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 489 Td
+(25/06/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 500.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 489 Td
+(42,86) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 489 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 441.75 538.5 30 re
+W n
+Q
+q
+28.5 441.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 456 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 470.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 459 Td
+(25/07/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 470.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 459 Td
+(42,86) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 459 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 411.75 538.5 30 re
+W n
+Q
+q
+28.5 411.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 426 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 440.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 429 Td
+(25/08/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 440.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 429 Td
+(42,86) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 429 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 381.75 538.5 30 re
+W n
+Q
+q
+28.5 381.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 396 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 410.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 399 Td
+(25/09/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 410.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 399 Td
+(42,86) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 399 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 351.75 538.5 30 re
+W n
+Q
+q
+28.5 351.75 538.5 30 re
+W n
+q
+0 0 0 rg
+28.5 366 207.75 14.25 re
+W n
+BT
+/F1 10 Tf
+30 380.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+234.75 369 Td
+(25/10/2022) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+312 380.25 Td
+() Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+390 369 Td
+(42,86) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+465.75 369 Td
+(PENDENTE) Tj
+ET
+Q
+Q
+q
+28.5 297.75 538.5 54 re
+W n
+Q
+q
+28.5 297.75 538.5 54 re
+W n
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+407.25 329.25 Td
+(Valor Total do Relatório:) Tj
+ET
+Q
+q
+0 0 0 rg
+BT
+/F1 10 Tf
+407.25 310.5 Td
+(R$0,00) Tj
+ET
+Q
+Q
+endstream
+endobj
+7 0 obj
+6052
+endobj
+8 0 obj <<
+/Type/Font/Subtype/TrueType/Name/F1/BaseFont/Arial
+/FirstChar 30
+/LastChar 255
+/Widths [
+938 938 347 347 444 695 695 1111 834 239 416 416 486 730 347 416 347 347 
+695 695 695 695 695 695 695 695 695 695 347 347 730 730 730 695 1269 834 
+834 903 903 834 764 972 903 347 625 834 695 1041 903 972 834 972 903 834 
+764 903 834 1180 834 834 764 347 347 347 587 695 416 695 695 625 695 695 
+347 695 695 278 278 625 278 1041 695 695 695 695 416 625 347 695 625 903 
+625 625 625 417 325 417 730 938 695 938 278 695 416 1250 695 695 416 1250 
+834 416 1250 938 764 938 938 278 278 416 416 438 695 1250 416 1250 625 416 
+1180 938 625 834 347 416 695 695 695 695 325 695 416 921 463 695 730 416 
+921 690 500 686 416 416 416 720 671 416 416 416 457 695 1042 1042 1042 764 
+834 834 834 834 834 834 1250 903 834 834 834 834 347 347 347 347 903 903 
+972 972 972 972 972 730 972 903 903 903 903 834 834 764 695 695 695 695 
+695 695 1111 625 695 695 695 695 347 347 347 347 695 695 695 695 695 695 
+695 686 764 695 695 695 695 625 695 625 
+]
+/FontDescriptor 9 0 R
+/Encoding/WinAnsiEncoding
+>> endobj
+9 0 obj <<
+/Type/FontDescriptor
+/FontName/Arial
+/Flags 32
+/FontBBox [ -831 -406 2500 1299 ]
+/MissingWidth 0
+/StemV 73
+/StemH 73
+/ItalicAngle 0
+/CapHeight 625
+/XHeight 313
+/Ascent 1132
+/Descent 265
+/Leading 147
+/MaxWidth 3331
+/AvgWidth 552
+>> endobj
+4 0 obj <<
+/ProcSet [ /PDF/Text/ImageB ]
+/Font <<
+/F1 8 0 R
+>>
+/XObject <<
+>>
+>> endobj
+3 0 obj <<
+/Type/Pages
+/Count 1
+/MediaBox [ 0 0 595.5 842.25 ]
+/Kids [ 5 0 R ]
+>> endobj
+xref
+0 10
+0000000000 65535 f
+0000000010 00000 n
+0000000163 00000 n
+0000007942 00000 n
+0000007846 00000 n
+0000000215 00000 n
+0000000332 00000 n
+0000006442 00000 n
+0000006465 00000 n
+0000007580 00000 n
+trailer
+<<
+/Size 10
+/Root 2 0 R
+/Info 1 0 R
+>>
+startxref
+8037
+%%EOF

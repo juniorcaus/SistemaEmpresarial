@@ -1,37 +1,38 @@
 object FEdicaoItemVenda: TFEdicaoItemVenda
-  Left = 421
-  Height = 208
-  Top = 114
-  Width = 794
+  Left = 886
+  Height = 204
+  Top = 286
+  Width = 835
   Caption = 'Lançamento de Item de Venda'
-  ClientHeight = 208
-  ClientWidth = 794
+  ClientHeight = 204
+  ClientWidth = 835
   OnClose = FormClose
   Position = poDesktopCenter
   LCLVersion = '2.2.6.0'
   object Label1: TLabel
-    Left = 31
+    Left = 19
     Height = 15
-    Top = 14
+    Top = 18
     Width = 53
     Caption = 'PRODUTO'
     ParentColor = False
   end
   object DBEdit1: TDBEdit
-    Left = 32
+    Left = 19
     Height = 23
-    Top = 40
+    Top = 32
     Width = 64
     DataField = 'CHAVE_PRODUTO'
     DataSource = DataModule1.DSItemVenda
     MaxLength = 0
     TabOrder = 0
+    OnExit = DBEdit1Exit
   end
   object DBLookupComboBox1: TDBLookupComboBox
-    Left = 104
+    Left = 90
     Height = 23
-    Top = 40
-    Width = 352
+    Top = 32
+    Width = 422
     DataField = 'CHAVE_PRODUTO'
     DataSource = DataModule1.DSItemVenda
     DropDownCount = 30
@@ -40,76 +41,79 @@ object FEdicaoItemVenda: TFEdicaoItemVenda
     ListFieldIndex = 0
     ListSource = DataModule1.DSProduto
     LookupCache = False
+    OnExit = DBLookupComboBox1Exit
     TabOrder = 1
   end
   object Label2: TLabel
-    Left = 471
+    Left = 518
     Height = 15
-    Top = 14
+    Top = 18
     Width = 69
     Caption = 'PREÇO UNIT.'
     ParentColor = False
   end
   object DBEdit2: TDBEdit
-    Left = 472
+    Left = 518
     Height = 23
-    Top = 40
-    Width = 104
+    Top = 32
+    Width = 109
     DataField = 'PRECO_UNITARIO'
     DataSource = DataModule1.DSItemVenda
     MaxLength = 0
     TabOrder = 2
-  end
-  object DBEdit3: TDBEdit
-    Left = 588
-    Height = 23
-    Top = 40
-    Width = 84
-    DataField = 'QUANTIDADE'
-    DataSource = DataModule1.DSItemVenda
-    MaxLength = 0
-    TabOrder = 3
+    OnExit = DBEdit2Exit
   end
   object Label3: TLabel
-    Left = 587
+    Left = 634
     Height = 15
-    Top = 14
+    Top = 18
     Width = 31
     Caption = 'QTDE.'
     ParentColor = False
   end
-  object DBEdit4: TDBEdit
-    Left = 683
+  object DBEdit3: TDBEdit
+    Left = 634
     Height = 23
-    Top = 40
-    Width = 104
+    Top = 32
+    Width = 51
+    DataField = 'QUANTIDADE'
+    DataSource = DataModule1.DSItemVenda
+    MaxLength = 0
+    TabOrder = 3
+    OnExit = DBEdit3Exit
+  end
+  object Label4: TLabel
+    Left = 694
+    Height = 15
+    Top = 18
+    Width = 71
+    Caption = 'VALOR TOTAL'
+    ParentColor = False
+  end
+  object DBEdit4: TDBEdit
+    Left = 694
+    Height = 23
+    Top = 32
+    Width = 109
     DataField = 'VALOR_TOTAL'
     DataSource = DataModule1.DSItemVenda
     MaxLength = 0
     TabOrder = 4
   end
-  object Label4: TLabel
-    Left = 682
-    Height = 15
-    Top = 14
-    Width = 71
-    Caption = 'VALOR TOTAL'
-    ParentColor = False
-  end
   object btnSalvar: TSpeedButton
-    Left = 32
-    Height = 64
-    Top = 104
-    Width = 512
-    Caption = 'SALVAR'
+    Left = 19
+    Height = 70
+    Top = 83
+    Width = 621
+    Caption = 'Salvar'
     OnClick = btnSalvarClick
   end
   object btnCancelar: TSpeedButton
-    Left = 568
-    Height = 64
-    Top = 104
-    Width = 219
-    Caption = 'CANCELAR'
+    Left = 653
+    Height = 70
+    Top = 83
+    Width = 150
+    Caption = 'Cancelar'
     OnClick = btnCancelarClick
   end
 end

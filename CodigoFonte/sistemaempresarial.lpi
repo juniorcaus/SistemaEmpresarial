@@ -5,7 +5,7 @@
     <PathDelim Value="\"/>
     <General>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="sistemaempresarial"/>
+      <Title Value="SistemaEmpresarial"/>
       <Scaled Value="True"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
@@ -25,6 +25,12 @@
       <FormatVersion Value="2"/>
     </RunParams>
     <RequiredPackages>
+      <Item>
+        <PackageName Value="frce"/>
+      </Item>
+      <Item>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item>
       <Item>
         <PackageName Value="FCL"/>
       </Item>
@@ -47,7 +53,7 @@
         <ComponentName Value="FMenu"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="uMenu"/>
+        <UnitName Value="UMenu"/>
       </Unit>
       <Unit>
         <Filename Value="udatamodule1.pas"/>
@@ -63,7 +69,7 @@
         <ComponentName Value="FCadastroCliente"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="uCadastroCliente"/>
+        <UnitName Value="UCadastroCliente"/>
       </Unit>
       <Unit>
         <Filename Value="uedicaocliente.pas"/>
@@ -85,6 +91,7 @@
         <Filename Value="uedicaoproduto.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FEdicaoProduto"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoProduto"/>
       </Unit>
@@ -92,6 +99,7 @@
         <Filename Value="updv.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FPDV"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uPDV"/>
       </Unit>
@@ -99,8 +107,33 @@
         <Filename Value="uedicaoitemvenda.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FEdicaoItemVenda"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uEdicaoItemVenda"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uconsultavendas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FConsultaVendas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uConsultaVendas"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucontasareceber.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FContasAReceber"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uContasAReceber"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelatoriocontasareceber.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRelatorioContasAReceber"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelatorioContasAReceber"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -108,7 +141,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="sistemaempresarial"/>
+      <Filename Value="SistemaEmpresarial"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
@@ -116,6 +149,7 @@
     </SearchPaths>
     <Linking>
       <Debugging>
+        <GenerateDebugInfo Value="False"/>
         <DebugInfoType Value="dsDwarf2Set"/>
       </Debugging>
       <Options>

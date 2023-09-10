@@ -18,17 +18,17 @@ type
     DBComboBox1: TDBComboBox;
     DBComboBox2: TDBComboBox;
     DBEdit1: TDBEdit;
+    DBEdit10: TDBEdit;
     DBEdit11: TDBEdit;
-    DBEdit12: TDBEdit;
+    DBEdit13: TDBEdit;
     DBEdit14: TDBEdit;
-    DBEdit15: TDBEdit;
     DBEdit16: TDBEdit;
     DBEdit2: TDBEdit;
-    DBEdit3: TDBEdit;
     DBEdit4: TDBEdit;
     DBEdit5: TDBEdit;
     DBEdit6: TDBEdit;
     DBEdit7: TDBEdit;
+    DBEdit8: TDBEdit;
     DBEdit9: TDBEdit;
     DBMemo1: TDBMemo;
     DBRadioGroup1: TDBRadioGroup;
@@ -38,7 +38,6 @@ type
     Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
-    Label15: TLabel;
     Label16: TLabel;
     Label17: TLabel;
     Label2: TLabel;
@@ -47,6 +46,7 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    Label8: TLabel;
     Label9: TLabel;
     procedure btnCancelarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
@@ -62,37 +62,34 @@ var
 
 implementation
 
-uses uDataModule1, uCadastroCliente;
+uses uDataModule1, UCadastroCliente;
 
 {$R *.lfm}
 
 { TFEdicaoCliente }
 
-procedure TFEdicaoCliente.btnSalvarClick(Sender: TObject); //BOTAO SALVAR
+procedure TFEdicaoCliente.btnSalvarClick(Sender: TObject); //BOTAO SALVAR EDICAO
 begin
-  DataModule1.TCliente.Post; //COMANDO PARA POSTAR NA TABELA DO BANCO DE DADOS
-  DataModule1.TCliente.ApplyUpdates; //COMANDO PARA SALVAR NA TABELA
-  btnCancelar.Enabled := False ;
-  Close;
-
+   DataModule1.TCliente.Post; //COMANDO PARA POSTAR NA TABELA DO BANCO DE DADOS
+   DataModule1.TCliente.ApplyUpdates;  //COMANDO PARA SALVAR NA TABELA
+   btnCancelar.Enabled := false;
+   Close;
 end;
 
-procedure TFEdicaoCliente.FormClose(Sender: TObject; //EVENTO FedicaoCliente OnClose
+procedure TFEdicaoCliente.FormClose(Sender: TObject; // Evento FEdicaoCliente OnClose
   var CloseAction: TCloseAction);
 begin
-     if(btnCancelar.Enabled) then
-     begin
+   if(btnCancelar.Enabled)then
+   begin
       DataModule1.TCliente.Cancel;
-     end;
-
+   end;
 end;
 
-procedure TFEdicaoCliente.btnCancelarClick(Sender: TObject);  //BOTAO CANCELAR
+procedure TFEdicaoCliente.btnCancelarClick(Sender: TObject); //BOTAO CANCELAR EDICAO
 begin
-  DataModule1.TCliente.Cancel;
-  btnCancelar.Enabled := false;
-  Close;
-
+   DataModule1.TCliente.Cancel;
+   btnCancelar.Enabled := false;
+   Close;
 end;
 
 end.

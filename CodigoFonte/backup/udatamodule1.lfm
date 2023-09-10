@@ -1,31 +1,32 @@
 object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
   OldCreateOrder = False
-  Height = 447
-  HorizontalOffset = 611
-  VerticalOffset = 158
-  Width = 753
+  Height = 332
+  HorizontalOffset = 516
+  VerticalOffset = 234
+  Width = 1033
+  PPI = 120
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
     AutoEncodeStrings = True
     Properties.Strings = (
       'AutoEncodeStrings=True'
       'controls_cp=CP_UTF8'
+      'codepage='
     )
-    Connected = True
     Port = 3050
-    Database = 'D:\PROJETOS-LAZARUS\SistemaEmpresarial\BancoDados\BANCODADOS.FDB'
+    Database = 'C:\Users\samsu\OneDrive\Área de Trabalho\SistemaEmpresarial\BancoDados\BANCODADOS.FDB'
     User = 'SYSDBA'
     Password = 'masterkey'
-    Protocol = 'firebirdd-3.0'
-    LibraryLocation = 'D:\Firebird_3_0\fbclient.dll'
-    Left = 136
-    Top = 80
+    Protocol = 'firebird-3.0'
+    Left = 80
+    Top = 50
   end
   object TCliente: TZTable
     Connection = ZConnection1
     TableName = 'CLIENTES'
-    Left = 40
-    Top = 40
+    Left = 220
+    Top = 50
     object TClienteCHAVE: TLongintField
       FieldKind = fkData
       FieldName = 'CHAVE'
@@ -203,19 +204,19 @@ object DataModule1: TDataModule1
       ProviderFlags = [pfInUpdate]
       ReadOnly = False
       Required = False
-      Size = 500
+      Size = 1000
     end
   end
   object DSCliente: TDataSource
     DataSet = TCliente
-    Left = 40
-    Top = 112
+    Left = 220
+    Top = 140
   end
   object TProduto: TZTable
     Connection = ZConnection1
     TableName = 'PRODUTOS'
-    Left = 232
-    Top = 40
+    Left = 336
+    Top = 48
     object TProdutoCHAVE: TLongintField
       FieldKind = fkData
       FieldName = 'CHAVE'
@@ -304,14 +305,14 @@ object DataModule1: TDataModule1
   end
   object DSProduto: TDataSource
     DataSet = TProduto
-    Left = 232
-    Top = 112
+    Left = 337
+    Top = 140
   end
   object TVenda: TZTable
     Connection = ZConnection1
     TableName = 'VENDAS'
-    Left = 40
-    Top = 299
+    Left = 488
+    Top = 48
     object TVendaCHAVE: TLongintField
       FieldKind = fkData
       FieldName = 'CHAVE'
@@ -401,12 +402,29 @@ object DataModule1: TDataModule1
       ReadOnly = False
       Required = False
     end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOME'
+      Index = 9
+      KeyFields = 'CHAVE_CLIENTE'
+      LookupCache = False
+      LookupDataSet = TCliente
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'NOME'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
   end
   object TItemVenda: TZTable
     Connection = ZConnection1
     TableName = 'ITEM_VENDAS'
-    Left = 136
-    Top = 296
+    MasterFields = 'CHAVE'
+    MasterSource = DSVenda
+    LinkedFields = 'CHAVE_VENDA'
+    Left = 616
+    Top = 48
     object TItemVendaCHAVE: TLongintField
       FieldKind = fkData
       FieldName = 'CHAVE'
@@ -470,12 +488,29 @@ object DataModule1: TDataModule1
       EditFormat = '##########.##'
       Precision = 2
     end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'DESCRICAO'
+      Index = 6
+      KeyFields = 'CHAVE_PRODUTO'
+      LookupCache = False
+      LookupDataSet = TProduto
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'DESCRICAO'
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
   end
   object TContaAReceber: TZTable
     Connection = ZConnection1
     TableName = 'CONTA_A_RECEBER'
-    Left = 232
-    Top = 296
+    MasterFields = 'CHAVE'
+    MasterSource = DSVenda
+    LinkedFields = 'CHAVE_VENDA'
+    Left = 749
+    Top = 46
     object TContaAReceberCHAVE: TLongintField
       FieldKind = fkData
       FieldName = 'CHAVE'
@@ -511,6 +546,8 @@ object DataModule1: TDataModule1
       ProviderFlags = [pfInUpdate]
       ReadOnly = False
       Required = False
+      DisplayFormat = '##########.##'
+      EditFormat = '##########.##'
       Precision = 2
     end
     object TContaAReceberDATA_VENCIMENTO: TDateField
@@ -521,6 +558,7 @@ object DataModule1: TDataModule1
       ProviderFlags = [pfInUpdate]
       ReadOnly = False
       Required = False
+      EditMask = '99/99/9999'
     end
     object TContaAReceberDATA_PAGAMEMTO: TDateField
       FieldKind = fkData
@@ -530,6 +568,7 @@ object DataModule1: TDataModule1
       ProviderFlags = [pfInUpdate]
       ReadOnly = False
       Required = False
+      EditMask = '99/99/9999'
     end
     object TContaAReceberSTATUS: TStringField
       FieldKind = fkData
@@ -551,20 +590,34 @@ object DataModule1: TDataModule1
       Required = False
       Size = 30
     end
+    object TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOME'
+      Index = 8
+      KeyFields = 'CHAVE_CLIENTE'
+      LookupCache = False
+      LookupDataSet = TCliente
+      LookupKeyFields = 'CHAVE'
+      LookupResultField = 'NOME'
+      ProviderFlags = [pfInUpdate]
+      ReadOnly = False
+      Required = False
+      Size = 125
+    end
   end
   object DSVenda: TDataSource
     DataSet = TVenda
-    Left = 40
-    Top = 384
+    Left = 488
+    Top = 136
   end
   object DSItemVenda: TDataSource
     DataSet = TItemVenda
-    Left = 136
-    Top = 384
+    Left = 616
+    Top = 136
   end
   object DSContaAReceber: TDataSource
     DataSet = TContaAReceber
-    Left = 232
-    Top = 384
+    Left = 749
+    Top = 140
   end
 end
